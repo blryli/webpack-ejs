@@ -1,0 +1,294 @@
+@charset "UTF-8";
+// 颜色
+$mainBtn: #139bd4;
+$blueBtn: #139bd4;
+$redBtn: #c9302c;
+.main-color {
+	color: $mainBtn;
+}
+
+.page-content {
+	overflow: hidden;
+}
+
+/* 距离 */
+
+.m-t-10 {
+	margin-top: 10px;
+}
+
+.m-t-20 {
+	margin-top: 20px;
+}
+
+.m-t-30 {
+	margin-top: 30px;
+}
+
+.m-t-50 {
+	margin-top: 50px;
+}
+
+.m-b-10 {
+	margin-bottom: 10px;
+}
+
+.m-b-20 {
+	margin-bottom: 20px;
+}
+
+.m-b-30 {
+	margin-bottom: 30px;
+}
+
+.m-b-60 {
+	margin-bottom: 60px;
+}
+
+.m-l-10 {
+	margin-left: 10px;
+}
+
+.m-l-20 {
+	margin-left: 20px;
+}
+
+.m-l-30 {
+	margin-left: 30px;
+}
+
+.p-t-30 {
+	padding-top: 30px;
+}
+
+.p-b-30 {
+	padding-bottom: 30px;
+}
+
+.p-40-0 {
+	padding: 20px 0;
+}
+.p-60-0 {
+	padding: 30px 0;
+}
+
+.p-80-0 {
+	padding: 40px 0;
+}
+
+.p-t-60 {
+	padding-top: 30px;
+}
+
+.p-t-40 {
+	padding-top: 20px;
+}
+
+.p-b-60 {
+	padding-bottom: 30px;
+}
+
+.p-t-100 {
+	padding-top: 30px;
+}
+
+/* 浮动 */
+
+.f-l {
+	float: left;
+}
+
+.f-r {
+	float: right;
+}
+
+/* 文本对齐 */
+
+.t-a-l {
+	text-align: left;
+}
+
+.t-a-c {
+	text-align: center;
+}
+
+.t-a-r {
+	text-align: right;
+}
+
+.xs-t-a-l {
+	text-align: left;
+}
+
+.xs-t-a-c {
+	text-align: center;
+}
+
+.xs-t-a-r-c {
+	text-align: center;
+}
+
+// 边框
+.b-t-ddd {
+	border-top: 1px solid #ddd;
+}
+
+// 背景颜色
+.bg-f5f5f5 {
+	background-color: #f5f5f5;
+}
+
+//-------------------生产机
+//按钮
+@mixin make-btn($color) {
+	color: #fff;
+	background-color: rgba($color, .8);
+	border-color: rgba($color, .8);
+	&:hover,
+	&:focus {
+		color: #fff;
+		background-color: rgba($color, 1);
+		border-color: rgba($color, 1);
+	}
+	&:active {
+		color: #fff;
+		background-color: rgba($color, 1);
+		border-color: rgba($color, 1);
+	}
+}
+
+@mixin btn-default($color) {
+	color: $color;
+	border-color: rgba($color, .8);
+	&:hover,
+	&:focus {
+		color: #fff;
+		background-color: rgba($color, 1);
+		border-color: rgba($color, 1);
+	}
+	&:active {
+		color: #fff;
+		background-color: rgba($color, 1);
+		border-color: rgba($color, 1);
+	}
+}
+
+//主按钮
+.btn-main {
+	@include make-btn($mainBtn)
+}
+
+// 默认按钮
+.btn-default {
+	@include btn-default($mainBtn)
+}
+
+.btn-red {
+	@include make-btn($redBtn)
+}
+
+@mixin btn($color) {
+	display: inline-block;
+	line-height: 1;
+	white-space: nowrap;
+	cursor: pointer;
+	background: #fff;
+	border: 1px solid #aaa;
+	color: #606266;
+	-webkit-appearance: none;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	outline: 0;
+	transition: .1s;
+	padding: 8px 24px;
+	font-size: 15px;
+	border-radius: 100px;
+	&:hover {
+		color: #fff;
+		background-color: rgba($color, 1);
+		border-color: rgba($color, 1);
+		box-shadow: 3px 6px 30px rgba($color, .6);
+	}
+}
+
+//蓝按钮
+.btn-blue {
+	@include btn($blueBtn)
+}
+
+//响应式
+.xs-hide {
+	display: none;
+}
+
+.xs-show {
+	display: block;
+}
+
+.container {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+@media (min-width: 768px) {
+	.container {
+		margin-left: auto;
+		margin-right: auto;
+		width: 750px;
+	}
+	.xs-hide {
+		display: block;
+	}
+	.xs-show {
+		display: none;
+	}
+	.xs-t-a-l {
+		text-align: right;
+	}
+	.xs-t-a-c {
+		text-align: left;
+	}
+	.xs-t-a-r-c {
+		text-align: right;
+	}
+	.m-t-50 {
+		margin-top: 100px;
+	}
+	.p-40-0 {
+		padding: 40px 0;
+	}
+	.p-60-0 {
+		padding: 60px 0;
+	}
+	.p-80-0 {
+		padding: 80px 0;
+	}
+	.p-t-40 {
+		padding-top: 40px;
+	}
+	.p-t-60 {
+		padding-top: 60px;
+	}
+	.p-t-100 {
+		padding-top: 100px;
+	}
+	.p-b-60 {
+		padding-bottom: 60px;
+	}
+}
+
+@media (min-width: 992px) {
+	.container {
+		width: 970px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.container {
+		width: 1200px;
+	}
+}
+
+.is-show {
+	display: block;
+}

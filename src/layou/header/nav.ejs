@@ -1,0 +1,26 @@
+<ul id="nav" class="el-menu">
+    <% navs.forEach(function(nav){%>
+        <% if (nav.children) { %>
+            <li class="el-submenu">
+                <div <% if (currentNav[0] == nav.name ) { %> class="el-submenu__title active"
+                    <% } else {%> class="el-submenu__title" <%} %> >
+                    <span><%= nav.name %></span>
+                    <!-- <i class="el-submenu__icon-arrow el-icon-arrow-down"></i> -->
+                </div>
+                <ul role="menu" class="el-menu el-menu--popup el-menu--popup-bottom-start t-a-l">
+                    <% nav.children.forEach(function(av) { %>
+                        <li <% if (currentNav[1] == av.name ) { %> class="el-menu-item active"
+                            <% } else { %> class="el-menu-item" <% } %> >
+                            <a href="<%= av.url %>"><%= av.name %></a></a>
+                        </li>
+                    <% }) %>
+                </ul>
+            </li>
+        <% } else { %>
+            <li <% if (currentNav == nav.name) { %> class="el-menu-item active"
+                <% } else { %> class="el-menu-item" <% } %> >
+                <a href="<%= nav.url %>"><%= nav.name %></a>
+            </li> 
+        <%} %>
+    <% }) %>
+</ul>

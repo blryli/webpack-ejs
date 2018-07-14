@@ -1,0 +1,63 @@
+<header class="el-header">
+    <div class="container">
+        <div class="el-row">
+            <div id="click-menu" class="el-col el-col-xs-3 xs-show">
+                <a href="javascript:void(0)" style="padding-top: 20px;">
+                    <img src="./assets/img/header-footer/menu.png" alt="通关平台 慧通关" title="通关平台 慧通关">
+                </a>
+            </div>
+            <div class="el-col el-col-sm-4 m-t-20 xs-hide">
+                <a href="/index.html" style="padding-top: 20px;">
+                    <img src="./assets/img/header-footer/logo.png" alt="通关平台 慧通关" title="通关平台 慧通关">
+                </a>
+            </div>
+            <div class="xs-show" style="position: absolute;left: 50%;top:10px;transform: translate(-50%, 0)">
+                <a href="/index.html" style="padding-top: 20px;">
+                    <img src="./assets/img/header-footer/logo@2x.png" alt="通关平台 慧通关" title="通关平台 慧通关">
+                </a>
+            </div>
+            <div id="search" class="el-col el-col-xs-offset-1 el-col-xs-16 el-col-sm-7 m-t-30">
+                <div id="search-input" class="el-input el-input--medium el-input--suffix">
+                    <input type="text" autocomplete="off" placeholder="请输入查询内容" class="el-input__inner">
+                    <span class="el-input__suffix">
+                        <span class="el-input__suffix-inner">
+                            <i class="el-input__icon el-icon-search"></i>
+                        </span>
+                    </span>
+                    <div class="search-type">HS编码
+                        <span>|</span>查税率
+                        <span>|</span>双反
+                        <span>|</span>归类
+                        <span>|</span>知识产权
+                        <span>|</span>实时汇率</div>
+                </div>
+                <a id="search-btn" href="javascript:void(0)" class="xs-show search-btn" style="position: absolute;right: 0;top:15px;">
+                    <img src="./assets/img/header-footer/search.png" alt="通关平台 慧通关" title="通关平台 慧通关">
+                    <img src="./assets/img/header-footer/close.png" alt="通关平台 慧通关" title="通关平台 慧通关">
+                </a>
+            </div>
+            <div id="login-menu">
+                <div id="click-close" class="xs-show" style="width: 100%;height: 50px;line-height: 50px;color: #fff;font-size: 30px;padding-left: 20px;">
+                    <span style="cursor: pointer;">×</span>
+                </div>
+                <div class="el-col el-col-xs-24 el-col-sm-9 t-a-r xs-t-a-l menu">
+                    <%= nav %>
+                </div>
+                <div class="el-col el-col-xs-24 el-col-sm-4 t-a-r">
+                    <ul class="login el-row">
+                        <li>
+                            <a href="https://passport.yunbaoguan.cn/#/login">
+                                <button type="button" class="el-button btn-main">登录</button>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://passport.yunbaoguan.cn/#/register/new">
+                                <button type="button" class="el-button el-button--default">注册</button>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,85 @@
+@charset "UTF-8";
+.banner {
+	height: 180px;
+	background-image: url(./img/banner.png);
+	background-repeat: no-repeat;
+	background-position: 50%;
+	background-size: 310px auto;
+}
+
+// 舱单
+.service-cd {
+	h2 {
+		margin: 10px 0;
+		font-weight: normal;
+	}
+	p {
+		margin-bottom: 24px;
+	}
+	img {
+		width: 300px;
+		height: auto;
+	}
+}
+
+// 流程
+.service-step {
+	li {
+		height: 80px;
+		img {
+			width: 40px;
+			height: auto;
+			min-height: 42px;
+		}
+		&:not(:last-child) {
+			background: url(./img/arrow.png) no-repeat right center;
+		}
+	}
+}
+
+// 服务
+.service-fw {
+	h3 {
+		line-height: 32px;
+	}
+	p {
+		line-height: 28px;
+	}
+}
+
+// 服务类型
+.service-type {
+	img {
+		float: none;
+		max-width: 100%;
+	}
+}
+
+@media (min-width: 768px) {
+	.banner {
+		height: 572px;
+		background-size: 1128px auto;
+	}
+	.service-cd {
+		img {
+			width: 524px;
+			height: auto;
+		}
+	}
+	.service-step {
+		li {
+			height: 96px;
+			img {
+				width: auto;
+				height: auto;
+			}
+		}
+	}
+	.service-type {
+		img {
+			float: left;
+			margin-right: 10px;
+			max-width: 100%;
+		}
+	}
+}

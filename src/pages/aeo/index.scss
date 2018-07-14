@@ -1,0 +1,150 @@
+@charset "UTF-8";
+.bg-f4f4f4 {
+	background-color: #f4f4f4;
+}
+
+.bg-5cb2ed {
+	position: relative;
+	background-color: #5cb2ed;
+}
+
+.banner {
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+.aeo {
+	.aeo-img {
+		img {
+			width: 60%;
+			height: auto;
+		}
+	}
+	.aeo-title {
+		font-size: 20px;
+		font-weight: bold;
+	}
+	.aeo-text {
+		margin-top: 20px;
+		font-size: 14px;
+		li {
+			+li {
+				margin-top: 10px;
+			}
+		}
+	}
+}
+
+.aeo-2,
+.aeo-6,
+.aeo-4 {
+	color: #fff;
+}
+
+.aeo-4 {
+	padding: 30px;
+	background-color: #215e88;
+	border: 2px solid #5bb2ed;
+}
+
+.m-t--40 {
+	margin-top: -30px;
+}
+
+@media (min-width: 768px) {
+	.aeo {
+		.aeo-img {
+			img {
+				width: auto;
+			}
+		}
+		.aeo-title {
+			font-size: 30px;
+		}
+		.aeo-text {
+			font-size: 16px;
+		}
+	}
+	.aeo-1 {
+		margin-top: 70px;
+		padding-right: 20px;
+		border-right: 1px solid #5cb2ed;
+		.aeo-title,
+		.aeo-text {
+			position: relative;
+			&::after {
+				content: "";
+				position: absolute;
+				height: 10px;
+				width: 10px;
+				display: block;
+				border: 1px solid #5cb2ed;
+				border-radius: 100%;
+				right: -26px;
+				top: 15px;
+				background-color: #f4f4f4;
+			}
+		}
+	}
+	.aeo-2 {
+		margin-top: 70px;
+	}
+	.hlhs-2 {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		span {
+			top: 36%;
+			position: absolute;
+			display: block;
+			height: 0;
+			width: 1000px;
+			transform: rotate(-45deg);
+			border-top: 2px solid #e0f2ff;
+			&:nth-child(1) {
+				left: -34%;
+			}
+			&:nth-child(2) {
+				left: -25%;
+				border-top-width: 17px;
+			}
+			&:nth-child(3) {
+				left: -23%;
+			}
+			&:nth-child(4) {
+				left: 76%;
+				top: -27%;
+			}
+			&:nth-child(5) {
+				left: 75%;
+				border-top-width: 15px;
+			}
+			&:nth-child(6) {
+				left: 77%;
+			}
+			&:nth-child(7) {
+				left: 81%;
+			}
+		}
+	}
+	.m-t--40 {
+		margin-top: -60px;
+	}
+	.aeo-4 {
+		margin-top: 40px;
+		outline: 15px solid #215e88;
+	}
+	.aeo-6 {
+		padding: 100px 0;
+		text-align: center;
+		background: url(./img/polygon.png) no-repeat center center;
+		.aeo-content{
+			margin-top: -50px;
+		}
+	}
+}
