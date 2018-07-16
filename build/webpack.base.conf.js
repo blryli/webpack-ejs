@@ -52,9 +52,9 @@ module.exports = {
 	plugins: [
 		// 全局暴露统一入口
 		new webpack.ProvidePlugin({
-			$: "jquery",
-			jQuery: "jquery",
-			'window.jQuery': 'jquery',
+			// $: "jquery",
+			// jQuery: "jquery",
+			// 'window.jQuery': 'jquery',
 		}),
 		//静态资源输出
 		new copyWebpackPlugin([{

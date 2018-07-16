@@ -1,7 +1,7 @@
 module.exports = [
   {
     name: '首页',
-    url: '/index.html'
+    url: '/'
   },
   {
     name: '产品',
